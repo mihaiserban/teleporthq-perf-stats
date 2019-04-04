@@ -20,7 +20,7 @@ jobs:
                   name: Run stats
                   command: |
                       set -eu # stop on error
-                      node ~/build/run-stats/
+                      GITHUB_ACCESS_TOKEN=${GITHUB_ACCESS_TOKEN} node ~/build/run-stats/
 workflows:
     version: 2
     build_tag:
