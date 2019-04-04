@@ -15,12 +15,12 @@ jobs:
                   name: Installing NPM dependencies
                   working_directory: ~/build
                   command: |
-                      cd /run-stats && yarn install --production
+                      cd ~/build/run-stats && yarn install --production
             - run:
                   name: Run stats
                   command: |
                       set -eu # stop on error
-                      node /get-stats/
+                      node ~/build/get-stats/
 workflows:
     version: 2
     build_tag:
