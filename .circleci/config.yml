@@ -20,7 +20,7 @@ jobs:
                   name: Run stats
                   command: |
                       set -eu # stop on error
-                      node ~/build/get-stats/
+                      node ~/build/run-stats/
 workflows:
     version: 2
     build_tag:
