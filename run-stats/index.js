@@ -33,7 +33,7 @@ const buildRepo = async dir => {
 }
 
 const getTags = async () => {
-  const { stdout } = await exec('git tag --sort=-taggerdate')
+  const { stdout } = await exec('git tag')
   const tags = stdout.trim().split('\n')
   return tags
 }
